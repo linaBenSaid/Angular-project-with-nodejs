@@ -1,0 +1,18 @@
+<div class="container text-center mt-5">
+    <!-- first row -->
+    <div class="row"> 
+        <div class="col-8">
+            <div class="mb-3">
+                <h3 for="task" class="form-label">add new task title</h3>
+                <input #taskinput type="text" class="form-control" id="task" placeholder="Enter title...">
+              </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8">
+            <button type="button" class="btn btn-secondary m-2" routerLink="../">Cancel</button>
+            <!-- go back to main page -->
+            <button type="button" class="btn btn-primary" (click)="addnewtask(taskinput.value)">Add task</button>
+        </div>
+    </div>
+</div>

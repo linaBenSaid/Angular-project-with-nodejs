@@ -1,0 +1,10 @@
+# DELETE  http://localhost:4000/tasklists/635c02c67f8d7866977b1fd2
+//make a tasklist
+# POST http://localhost:4000/tasklist
+# DELETE  http://localhost:4000/tasklists/634c2777040fe85d66df494c
+//creates a task in tasklist with id
+# POST http://localhost:4000/tasklists/635c15587f8d7866977b2028/task
+//prints all tasks in tasklist with id
+# GET http://localhost:4000/tasklists/63553729ed2619dcbbdde53c/tasks
+
+#  PATCH http://localhost:4000/tasklists/63553729ed2619dcbbdde53c/tasks/6358039bcf1b69c83bd9e439

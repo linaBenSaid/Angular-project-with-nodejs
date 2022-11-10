@@ -1,0 +1,40 @@
+<div class="container border mt-5"> 
+    <!-- mt stands for margin top while m only stands for all margins -->
+  <h2 class="bg-success p-3 fw-bold text-center">  am a container</h2>
+  <div class="row">
+      <div class="col-md-4 col-sd-12">
+          <div class="row">
+              <div class="col-9">
+                <h3 class="fw-bold">task List</h3>
+              </div>
+              <div class="col-3">
+                <button type="button" class="btn btn-success" routerLink="/new-task-list">Add tasklist</button>
+              </div>
+          </div>
+        <ul class="list-group">
+            <a [routerLink]="['/task-lists',item._id]" routerLinkActive="active"
+            *ngFor="let item of tasklists" class="list-group-item list-group-item-action">
+              {{item.title}}
+              <span (click)="deletetasklist(item)" class="badge bg-danger rounded-pill">x</span>
+            </a>
+          </ul>
+      </div>
+      <div class="col-md-4 col-sd-12">
+          <div class="row">
+              <div class="col-10">
+                <h3 class="fw-bold">associated Tasks</h3>
+              </div>
+              <div class="col-2">
+                <button type="button" class="btn btn-success" (click)="addnewtask()">Add task</button>
+              </div>
+        <ul class="list-group">
+            <li [class.markcompleted]="item.completed==true"
+              style="cursor: pointer;" *ngFor="let item of tasks" (click)="taskclicked(item)" class="list-group-item d-flex justify-content-between align-items-center">
+              {{item.title}}
+              <span (click)="deletetask(item)" class="badge bg-danger rounded-pill">x</span>
+            </li>
+          </ul>
+          </div>
+      </div>
+  </div>
+</div>
